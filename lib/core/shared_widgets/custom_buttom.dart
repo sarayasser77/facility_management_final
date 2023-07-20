@@ -1,4 +1,7 @@
+import 'package:facility_management/constants.dart';
 import 'package:flutter/material.dart';
+
+import '../utilies/styles.dart';
 
 
 class CustomButton extends StatelessWidget {
@@ -11,10 +14,12 @@ class CustomButton extends StatelessWidget {
         required this.text,
         this.fontSized,
         this.func,
+         this.borderColor =kPrimaryColor,
       })
       : super(key: key);
 
   final Color backgroundColor;
+  final Color borderColor;
   final Color textColor;
   final BorderRadius? borderRadius;
   final double? fontSized;
@@ -30,15 +35,16 @@ class CustomButton extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 30 , vertical: 8),
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
+            side: BorderSide(color: borderColor),
             borderRadius: borderRadius ?? BorderRadius.circular( 12,),
           ),
         ),
         child: Text(
           text,
-          // style: Styles.textStyle14.copyWith(
-          //   color: textColor,
-          //   fontSize: fontSized,
-          // ),
+          style: Styles.textStyle15.copyWith(
+            color: textColor,
+            fontSize: fontSized,
+          ),
         ),
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:facility_management/features/boarding/presentation/view/boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.robotoTextTheme(),
       ),
-      home: const SignUpView(),
+      home: const BoardingView(),
     );
   }
 }
