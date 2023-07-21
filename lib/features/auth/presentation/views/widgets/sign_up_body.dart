@@ -1,6 +1,8 @@
 
 import 'package:facility_management/constants.dart';
+import 'package:facility_management/core/shared_widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/shared_widgets/custom_buttom.dart';
 import '../../../../../core/utilies/styles.dart';
@@ -43,41 +45,25 @@ class _SignBodyState extends State<SignBody> {
              const SizedBox(
                height: 40.0,
              ),
-             TextFormField(
-               controller: emailController,
-               decoration: const InputDecoration(
-                 hintText: 'Email, number or username ',
-                 border: OutlineInputBorder(),
-               ),
-               keyboardType: TextInputType.emailAddress,
-               onFieldSubmitted: (value){
-                 print(value);
-               },
+             defaultText(
+                 type: TextInputType.emailAddress,
+                 hint: 'Email, number or username ',
+                 controller: emailController,
              ),
              const SizedBox(
                height: 15.0,
              ),
-             TextFormField(
+             defaultText(
+                 type: TextInputType.visiblePassword,
+                 hint: 'Password',
                controller: passwordController,
-               decoration: InputDecoration(
-                 hintText: 'Password',
-                 suffixIcon: IconButton(
-                   onPressed: () {
-                     setState(() {
-                       isPasswordVisible = !isPasswordVisible;
-                     });
-                   },
-                   icon: Icon(
-                     isPasswordVisible ? Icons.visibility : Icons.visibility_off,
-                   ),
-                 ),
-                 border: OutlineInputBorder(),
-               ),
-               keyboardType: TextInputType.visiblePassword,
-               onFieldSubmitted: (value){
-                 print(value);
-               },
-               obscureText: !isPasswordVisible,
+               isObscure: !isPasswordVisible,
+               suffix: isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+               pressed: (){
+                 setState(() {
+                   isPasswordVisible = !isPasswordVisible;
+                 });
+               }
              ),
              const SizedBox(
                height: 40.0,
@@ -86,12 +72,7 @@ class _SignBodyState extends State<SignBody> {
                backgroundColor: kPrimaryColor,
                text: 'Sign in',
                func: () {
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(
-                     builder: (context) => const HomeView(),
-                   ),
-                 );
+                 GoRouter.of(context).push('/homeView');
                },
              ),
              const SizedBox(
@@ -106,11 +87,8 @@ class _SignBodyState extends State<SignBody> {
                  ),
                  TextButton(
                    onPressed: (){
-                     Navigator.push(
-                       context,
-                       MaterialPageRoute(
-                         builder: (context) => const RegisterScreen(),
-                       ),
+                     GoRouter.of(context).push(
+                         '/registerView'
                      );
                    },
                    child:  Text(

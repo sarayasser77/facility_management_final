@@ -1,4 +1,3 @@
-import 'package:facility_management/features/boarding/presentation/view/boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,12 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.robotoTextTheme(),
       ),
-      home: const BoardingView(),
     );
   }
 }
