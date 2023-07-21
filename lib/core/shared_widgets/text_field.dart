@@ -5,7 +5,7 @@ Widget defaultText({
   required TextInputType type,
   Function(String)? onChange,
   FormFieldValidator? validate,
-   String? hint ,
+  String? hint ,
   IconData? prefix,
   bool isObscure = false,
   IconData? suffix,
@@ -17,7 +17,7 @@ Widget defaultText({
   enabled: enable,
   controller: controller,
   obscureText: isObscure,
-   decoration:  InputDecoration(
+  decoration:  InputDecoration(
     hintText: hint,
     prefixIcon: Icon(prefix),
     suffixIcon: suffix!=null ? IconButton(

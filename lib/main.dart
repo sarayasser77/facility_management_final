@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'core/utilies/app_router.dart';
 import 'features/auth/presentation/views/sign_up_view.dart';
 
 void main() {
