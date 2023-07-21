@@ -1,8 +1,10 @@
 import 'package:facility_management/core/utilies/styles.dart';
+import 'package:facility_management/core/shared_widgets/radio_buttom.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
+import '../../../../../core/shared_widgets/check_button.dart';
 import '../../../../../core/shared_widgets/custom_buttom.dart';
 import '../../../../../core/shared_widgets/text_field.dart';
 
@@ -16,6 +18,7 @@ class RegisterBody extends StatefulWidget {
 var emailController = TextEditingController();
 var passwordController = TextEditingController();
 bool isPasswordVisible = false;
+bool _isChecked = false;
 class _RegisterBodyState extends State<RegisterBody> {
   @override
   Widget build(BuildContext context) {
@@ -82,34 +85,21 @@ class _RegisterBodyState extends State<RegisterBody> {
                 const SizedBox(
                   height: 15.0,
                 ),
-                Row(
-                  children: [
-                  Text(
-                    'Male',
-                    style: Styles.textStyle22.copyWith(fontSize: 14),
-                  ),
-                  ],
-                ),
+                RadioCheck(),
                 const SizedBox(
                   height: 20.0,
                 ),
-                Row(
-                  children: [
-
-                    Text(
-                      'I agree to terms and conditions',
-                      style: Styles.textStyle22.copyWith(fontSize: 13),
-                    ),
-                  ],
-                ),
+                CheckButtom(),
                 SizedBox(
                   height: 15,
                 ),
                 CustomButton(
                   backgroundColor: kPrimaryColor,
                   text: 'Register',
+                  // isChecked: _isChecked,
                   func: () {
                     GoRouter.of(context).push('/verifyView');
+                    // isChecked ? GoRouter.of(context).push('/verifyView') : print('You should agree on this');
                   },
                 ),
                 const SizedBox(

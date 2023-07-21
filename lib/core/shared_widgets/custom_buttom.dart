@@ -12,6 +12,7 @@ class CustomButton extends StatelessWidget {
         required this.text,
         this.fontSized,
        required this.func,
+        this.isChecked,
       })
       : super(key: key);
 
@@ -21,6 +22,7 @@ class CustomButton extends StatelessWidget {
   final double? fontSized;
   final String text;
   final VoidCallback func;
+  final bool? isChecked;
   @override
   Widget build(BuildContext context) {
     return Center(
