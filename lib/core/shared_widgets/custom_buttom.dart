@@ -1,4 +1,3 @@
-import 'package:facility_management/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../utilies/styles.dart';
@@ -15,6 +14,7 @@ class CustomButton extends StatelessWidget {
         this.fontSized,
         this.func,
          this.borderColor =kPrimaryColor,
+       required this.func,
       })
       : super(key: key);
 
