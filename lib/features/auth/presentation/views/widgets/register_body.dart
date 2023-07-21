@@ -1,4 +1,10 @@
+import 'package:facility_management/core/utilies/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../constants.dart';
+import '../../../../../core/shared_widgets/custom_buttom.dart';
+import '../../../../../core/shared_widgets/text_field.dart';
 
 
 class RegisterBody extends StatefulWidget {
@@ -13,138 +19,98 @@ bool isPasswordVisible = false;
 class _RegisterBodyState extends State<RegisterBody> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body:
-      Padding(
-        padding:  const EdgeInsets.all(20.0), //this number is standard at all at will make padding to make it in center
+    return Padding(
+        padding:  const EdgeInsets.all(20.0),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  alignment: Alignment.topLeft,
-                  child: Image.asset(
-                    'assets/images/McQueen15-removebg-preview.png',
-                    width: 100,
-                    height: 100,
-                  ),
-                ),
                 const Text(
-                  'WELCOME, ',
-                  style: TextStyle(
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  'Welcome! ',
+                  style: Styles.textStyle27,
                 ),
                 const SizedBox(height: 20,),
-                const Text('Sign Up to start your new journey' , style: TextStyle(color: Colors.grey),),
-                const SizedBox(
-                  height: 40.0,
-                ),
-                TextFormField(
-                  decoration: const InputDecoration(
-                    labelText: 'Fullname',
-                    border: OutlineInputBorder(),
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
-                    print(value);
-                  },
+                defaultText(
+                  type: TextInputType.text,
+                  hint: 'Fullname',
                 ),
                 const SizedBox(
                   height: 15.0,
                 ),
-                TextFormField(
-                  decoration: const InputDecoration(
-                    labelText: 'Username',
-                    prefixIcon: Icon(Icons.person,),
-                    border: OutlineInputBorder(),
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
-                    print(value);
-                  },
+                defaultText(
+                  type: TextInputType.phone,
+                  hint: 'Phone number',
                 ),
                 const SizedBox(
                   height: 15.0,
                 ),
-                TextFormField(
+                defaultText(
+                  type: TextInputType.emailAddress,
+                  hint: 'Email ',
                   controller: emailController,
-                  decoration: const InputDecoration(
-                    labelText: 'E-mail',
-                    prefixIcon: Icon(Icons.email,),
-                    border: OutlineInputBorder(),
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
-                    print(value);
-                  },
                 ),
                 const SizedBox(
                   height: 15.0,
                 ),
-                TextFormField(
-                  decoration: const InputDecoration(
-                    labelText: 'PhoneNumber',
-                    prefixIcon: Icon(Icons.phone_android,),
-                    border: OutlineInputBorder(),
-                  ),
-                  keyboardType: TextInputType.emailAddress,
-                  onFieldSubmitted: (value){
-                    print(value);
-                  },
+                defaultText(
+                    type: TextInputType.visiblePassword,
+                    hint: 'Password',
+                    controller: passwordController,
+                    isObscure: !isPasswordVisible,
+                    suffix: isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                    pressed: (){
+                      setState(() {
+                        isPasswordVisible = !isPasswordVisible;
+                      });
+                    }
                 ),
                 const SizedBox(
                   height: 15.0,
                 ),
-                TextFormField(
-                  controller: passwordController,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    prefixIcon: Icon(Icons.lock,),
-                    suffixIcon: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          isPasswordVisible = !isPasswordVisible;
-                        });
-                      },
-                      icon: Icon(
-                        isPasswordVisible ? Icons.visibility : Icons.visibility_off,
-                      ),
-                    ),
-                    border: OutlineInputBorder(),
-                  ),
-                  keyboardType: TextInputType.visiblePassword,
-                  onFieldSubmitted: (value){
-                    print(value);
-                  },
-                  obscureText: !isPasswordVisible,
+                defaultText(
+                  type: TextInputType.text,
+                  hint: 'Address ',
                 ),
                 const SizedBox(
                   height: 20.0,
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 50,
-                  color: Colors.black,
-                  child:  MaterialButton(
-                    onPressed: ()
-                    {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const HomePage(),
-                      //   ),
-                      // );
-                    },
-                    child: const Text(
-                      'Go',
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
+                Text(
+                  'Gender',
+                  style: Styles.textStyle22.copyWith(fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 15.0,
+                ),
+                Row(
+                  children: [
+                  Text(
+                    'Male',
+                    style: Styles.textStyle22.copyWith(fontSize: 14),
                   ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  children: [
+
+                    Text(
+                      'I agree to terms and conditions',
+                      style: Styles.textStyle22.copyWith(fontSize: 13),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CustomButton(
+                  backgroundColor: kPrimaryColor,
+                  text: 'Register',
+                  func: () {
+                    GoRouter.of(context).push('/verifyView');
+                  },
                 ),
                 const SizedBox(
                   height: 10.0,
@@ -152,19 +118,19 @@ class _RegisterBodyState extends State<RegisterBody> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:  [
-                    const Text('Already have an account ?',
+                    Text(
+                        'Already have an account?',
+                        style: Styles.textStyle22.copyWith(fontSize: 13, color: rareColor)
                     ),
                     TextButton(
                       onPressed: (){
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => const LoginScreen(),
-                        //   ),
-                        // );
+                        GoRouter.of(context).push(
+                            '/'
+                        );
                       },
-                      child: const Text(
-                        'Log In ',
+                      child:  Text(
+                        'Signin',
+                        style: Styles.textStyle15.copyWith(fontSize: 13 , color: kPrimaryColor),
                       ),
                     ),
                   ],
@@ -173,7 +139,6 @@ class _RegisterBodyState extends State<RegisterBody> {
             ),
           ),
         ),
-      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 
 import 'package:facility_management/features/auth/presentation/views/register_view.dart';
 import 'package:facility_management/features/auth/presentation/views/sign_up_view.dart';
+import 'package:facility_management/features/auth/presentation/views/verify_view.dart';
 import 'package:facility_management/features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,6 +20,10 @@ abstract class AppRouter{
     GoRoute(
       path: '/homeView',
       builder: (context , state) => const HomeView(),
+    ),
+    GoRoute(
+      path: '/verifyView',
+      builder: (context , state) => const VerifyView(),
     ),
   ]);
 }
