@@ -89,7 +89,9 @@ class _RegisterBodyState extends State<RegisterBody> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                CheckButtom(),
+                CheckButtom(
+                  text: 'I agree to terms and conditions',
+                ),
                 SizedBox(
                   height: 15,
                 ),

@@ -5,13 +5,16 @@ import 'package:facility_management/features/auth/presentation/views/verify_view
 import 'package:facility_management/features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/payment/presentation/views/pay_card.dart';
+import '../../features/payment/presentation/views/widgets/pay_card.dart';
+
 
 
 abstract class AppRouter{
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context , state) => const SignUpView(),
+      builder: (context , state) => const PayCardView(),
     ),
     GoRoute(
       path: '/registerView',

@@ -5,7 +5,7 @@ Widget defaultText({
   required TextInputType type,
   Function(String)? onChange,
   FormFieldValidator? validate,
-  required String hint ,
+   String? hint ,
   IconData? prefix,
   bool isObscure = false,
   IconData? suffix,

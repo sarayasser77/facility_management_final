@@ -1,5 +1,5 @@
 import 'package:facility_management/core/shared_widgets/button_appbar.dart';
-import 'package:facility_management/features/auth/presentation/views/widgets/verify_cody.dart';
+import 'package:facility_management/features/auth/presentation/views/widgets/verify_body.dart';
 import 'package:flutter/material.dart';
 
 class VerifyView extends StatelessWidget {

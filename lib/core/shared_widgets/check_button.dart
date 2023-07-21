@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../utilies/styles.dart';
 
 class CheckButtom extends StatefulWidget {
-  const CheckButtom({Key? key}) : super(key: key);
+  final String text;
+  const CheckButtom({Key? key, required this.text}) : super(key: key);
 
   @override
   State<CheckButtom> createState() => _CheckButtomState();
@@ -26,7 +27,7 @@ class _CheckButtomState extends State<CheckButtom> {
             }
         ),
         Text(
-          'I agree to terms and conditions',
+          widget.text,
           style: Styles.textStyle22.copyWith(fontSize: 13),
         ),
       ],
