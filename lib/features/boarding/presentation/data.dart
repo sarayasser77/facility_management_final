@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 
 class BoardingData{
   static const Images=['assets/images/onboarding/img.png',

@@ -6,6 +6,8 @@ import 'package:facility_management/features/auth/presentation/views/verify_view
 import 'package:facility_management/features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/boarding/presentation/view/boarding_view.dart';
+
 
 
 
@@ -13,6 +15,10 @@ abstract class AppRouter{
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
+      builder: (context , state) => const BoardingView(),
+    ),
+    GoRoute(
+      path: '/signView',
       builder: (context , state) => const SignUpView(),
     ),
     GoRoute(

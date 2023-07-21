@@ -54,6 +54,7 @@ class _SignBodyState extends State<SignBody> {
                height: 15.0,
              ),
              defaultText(
+               lines: 1,
                  type: TextInputType.visiblePassword,
                  hint: 'Password',
                controller: passwordController,
