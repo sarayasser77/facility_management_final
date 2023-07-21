@@ -11,6 +11,7 @@ Widget defaultText({
   IconData? suffix,
   Function()? pressed,
   bool? enable,
+  int? lines,
 
 }) => TextFormField(
   enabled: enable,
@@ -33,4 +34,5 @@ Widget defaultText({
   keyboardType: type,
   onChanged: onChange,
   validator: validate,
+  maxLines: lines ,
 );
