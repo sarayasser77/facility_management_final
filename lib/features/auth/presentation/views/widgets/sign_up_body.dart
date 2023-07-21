@@ -1,6 +1,8 @@
 
+import 'package:facility_management/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/shared_widgets/custom_buttom.dart';
 import '../../../../../core/utilies/styles.dart';
 import '../../../../home/presentation/views/home_view.dart';
 import '../register_view.dart';
@@ -78,29 +80,19 @@ class _SignBodyState extends State<SignBody> {
                obscureText: !isPasswordVisible,
              ),
              const SizedBox(
-               height: 20.0,
+               height: 40.0,
              ),
-             Container(
-               width: double.infinity,
-               height: 50,
-               color: Colors.black,
-               child:  MaterialButton(
-                 onPressed: ()
-                 {
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(
-                       builder: (context) => const HomeView(),
-                     ),
-                   );
-                 },
-                 child: const Text(
-                   'Go',
-                   style: TextStyle(
-                     color: Colors.white,
+             CustomButton(
+               backgroundColor: kPrimaryColor,
+               text: 'Sign in',
+               func: () {
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(
+                     builder: (context) => const HomeView(),
                    ),
-                 ),
-               ),
+                 );
+               },
              ),
              const SizedBox(
                height: 10.0,
@@ -123,7 +115,7 @@ class _SignBodyState extends State<SignBody> {
                    },
                    child:  Text(
                      'Register ',
-                     style: Styles.textStyle15.copyWith(fontSize: 13),
+                     style: Styles.textStyle15.copyWith(fontSize: 13 , color: kPrimaryColor),
                    ),
                  ),
                ],
