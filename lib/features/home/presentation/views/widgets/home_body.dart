@@ -1,4 +1,5 @@
 import 'package:facility_management/core/shared_widgets/appbar2.dart';
+import 'package:facility_management/features/home/presentation/views/widgets/search.dart';
 import 'package:flutter/material.dart';
 
 class HomeBody extends StatefulWidget {
@@ -11,10 +12,12 @@ class HomeBody extends StatefulWidget {
 class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBarButtom2(text: 'Pay a bill',),
-        body: HomeBody(),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        children: [
+          Search(),
+        ],
       ),
     );
   }
