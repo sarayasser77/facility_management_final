@@ -46,6 +46,7 @@ class _VerifyBodyState extends State<VerifyBody> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 40),
             child: CustomButton(
+              width: MediaQuery.of(context).size.width*.7,
               backgroundColor: kPrimaryColor,
               text: 'Continue',
               func: () {

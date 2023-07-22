@@ -43,6 +43,7 @@ class _PayBodyState extends State<PayBody> {
             ),),
         Expanded(
             child: CustomButton(
+              width: MediaQuery.of(context).size.width*.7,
               backgroundColor: kPrimaryColor,
               text: 'Confirm',
               func: () {

@@ -69,6 +69,7 @@ class _ChatBodyState extends State<ChatBody> {
             ),
             SizedBox(height: 20,),
             CustomButton(
+              width: MediaQuery.of(context).size.width*.7,
                 backgroundColor: kPrimaryColor,
                 text: 'Send',
                 func: (){}

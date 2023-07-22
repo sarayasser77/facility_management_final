@@ -70,6 +70,7 @@ class _SignBodyState extends State<SignBody> {
                height: 40.0,
              ),
              CustomButton(
+               width: MediaQuery.of(context).size.width*.7,
                backgroundColor: kPrimaryColor,
                text: 'Sign in',
                func: () {

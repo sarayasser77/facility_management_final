@@ -100,6 +100,7 @@ class _PayCardState extends State<PayCard> {
           ),
         SizedBox(height: 50,),
           CustomButton(
+            width: MediaQuery.of(context).size.width*.7,
               backgroundColor: kPrimaryColor,
               text: 'Confirm',
               func: (){}

@@ -31,9 +31,10 @@ class LastBoarding extends StatelessWidget {
                 8,
                 MediaQuery.of(context).size.height / 40),
             child: SizedBox(
-                width: double.infinity,
+
                 height: MediaQuery.of(context).size.height / 16,
                 child: CustomButton(
+                  width: double.infinity,
                   backgroundColor: kPrimaryColor,
                   textColor: Colors.white,
                   text: 'Register',
@@ -43,8 +44,9 @@ class LastBoarding extends StatelessWidget {
              )),
            ),
            SizedBox(
-             width:double.infinity,height: MediaQuery.of(context).size.height/16,
+             height: MediaQuery.of(context).size.height/16,
              child: CustomButton(
+               width:double.infinity,
                backgroundColor: Colors.white,
                textColor: kPrimaryColor,
                text: 'Sign in',fontSized: MediaQuery.of(context).size.width/22,

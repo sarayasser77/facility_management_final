@@ -97,6 +97,7 @@ class _RegisterBodyState extends State<RegisterBody> {
                   height: 15,
                 ),
                 CustomButton(
+                  width: MediaQuery.of(context).size.width*.7,
                   backgroundColor: kPrimaryColor,
                   text: 'Register',
                   // isChecked: _isChecked,

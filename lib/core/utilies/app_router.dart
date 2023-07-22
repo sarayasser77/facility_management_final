@@ -10,6 +10,7 @@ import 'package:go_router/go_router.dart';
 import '../../features/boarding/presentation/view/boarding_view.dart';
 import '../../features/payment/presentation/views/pay_card.dart';
 import '../../features/payment/presentation/views/succcess_View.dart';
+import '../../features/successful/presentation/views/success_view.dart';
 
 
 

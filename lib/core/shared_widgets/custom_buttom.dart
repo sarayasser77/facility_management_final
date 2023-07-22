@@ -7,14 +7,18 @@ class CustomButton extends StatelessWidget {
       {
         Key? key,
         required this.backgroundColor,
-        this.textColor,
+        this.textColor=Colors.white,
         this.borderRadius,
         required this.text,
         this.fontSized,
        required this.func,
+        required this.width,
+        this.height=48,
+
       })
       : super(key: key);
-
+  final double? width;
+  final double? height;
   final Color backgroundColor;
   final Color? textColor;
   final BorderRadius? borderRadius;
@@ -25,13 +29,13 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: MediaQuery.of(context).size.width*.7,
-        height: 48,
+        width: width,
+        height: height,
         child: ElevatedButton(
           onPressed: func,
           child: Text(
             text,
-            style: Styles.textStyle15.copyWith(color: Colors.white),
+            style: Styles.textStyle15.copyWith(color : textColor),
           ),
           style: ElevatedButton.styleFrom(
             backgroundColor: backgroundColor,

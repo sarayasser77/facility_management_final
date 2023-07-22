@@ -15,6 +15,16 @@ abstract class Styles {
     fontWeight: FontWeight.w500, //meduim
     color: Colors.white,
   );
+  static const textStyle16 = TextStyle(
+    fontSize:16,
+    fontWeight: FontWeight.w500, //meduim
+    color: Colors.black,
+  );
+  static const textStyle12 = TextStyle(
+    fontSize:16,
+    fontWeight: FontWeight.w500, //meduim
+    color: Colors.black,
+  );
   static const textStyle20 = TextStyle(
     fontSize:20,
     color: Colors.black,
