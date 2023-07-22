@@ -9,50 +9,94 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: MediaQuery.of(context).size.width * .7,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
+        width: MediaQuery.of(context).size.width *.7,
+        decoration:  BoxDecoration(
+          color: Colors.white,
+          borderRadius: const BorderRadius.all(Radius.elliptical(3, 3)),
           boxShadow: [
             BoxShadow(
-              color: Colors.white.withOpacity(.1),
-              spreadRadius: 2,
-              blurRadius: 7,
-              offset: Offset(0, 3), // moves the shadow down
+              color: Colors.grey.withOpacity(0.5), // Set the shadow color
+              spreadRadius: 2, // Set the spread radius of the shadow
+              blurRadius: 6, // Set the blur radius of the shadow
+              offset: Offset(0, 3), // Set the offset of the shadow
             ),
           ],
         ),
         child: TextField(
-          decoration: InputDecoration(
-            enabledBorder:
-            OutlineInputBorder(
-              borderSide: const BorderSide(
-                color: Colors.white,
-
+              decoration: InputDecoration(
+              enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                  color: Colors.white,
+                ),
+                borderRadius: BorderRadius.circular(15),
               ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide:  BorderSide(
-                color: Colors.white.withOpacity(.2) ,
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: Colors.white.withOpacity(.2),
                 // width: 2,
+                ),
+                borderRadius: BorderRadius.circular(15),
               ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            hintText: 'Search for service, offer',
-            prefixIcon: IconButton(
-              onPressed: (){},
-              icon: const Opacity(
-                opacity: .8,
-                child: Icon(
-                  FontAwesomeIcons.magnifyingGlass,
-                  size: 22,
+              hintText: 'Search for service, offer',
+              prefixIcon: IconButton(
+                onPressed: () {},
+                icon: const Opacity(
+                  opacity: .8,
+                  child: Icon(
+                    FontAwesomeIcons.magnifyingGlass,
+                    size: 22,
+                  ),
                 ),
               ),
+              border: InputBorder.none,
             ),
-            border: InputBorder.none,
           ),
         ),
-      ),
     );
   }
 }
+// Container(
+//
+// decoration: BoxDecoration(
+// borderRadius: BorderRadius.circular(12),
+// boxShadow: [
+// BoxShadow(
+// color: Colors.white.withOpacity(.1),
+// spreadRadius: 2,
+// blurRadius: 7,
+// offset: Offset(0, 3), // moves the shadow down
+// ),
+// ],
+// ),
+// child: TextField(
+// decoration: InputDecoration(
+// enabledBorder:
+// OutlineInputBorder(
+// borderSide: const BorderSide(
+// color: Colors.white,
+//
+// ),
+// borderRadius: BorderRadius.circular(12),
+// ),
+// focusedBorder: OutlineInputBorder(
+// borderSide:  BorderSide(
+// color: Colors.white.withOpacity(.2) ,
+// // width: 2,
+// ),
+// borderRadius: BorderRadius.circular(12),
+// ),
+// hintText: 'Search for service, offer',
+// prefixIcon: IconButton(
+// onPressed: (){},
+// icon: const Opacity(
+// opacity: .8,
+// child: Icon(
+// FontAwesomeIcons.magnifyingGlass,
+// size: 22,
+// ),
+// ),
+// ),
+// border: InputBorder.none,
+// ),
+// ),
+// ),
