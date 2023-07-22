@@ -118,7 +118,7 @@ class _RegisterBodyState extends State<RegisterBody> {
                     TextButton(
                       onPressed: (){
                         GoRouter.of(context).push(
-                            '/'
+                            '/signView',
                         );
                       },
                       child:  Text(

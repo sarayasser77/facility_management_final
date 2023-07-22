@@ -7,9 +7,11 @@ class VerifyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarButtom(),
-      body: VerifyBody(),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBarButtom(),
+        body: VerifyBody(),
+      ),
     );
   }
 }

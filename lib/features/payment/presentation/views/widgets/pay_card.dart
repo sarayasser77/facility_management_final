@@ -17,7 +17,7 @@ class _PayCardState extends State<PayCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(25.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +25,7 @@ class _PayCardState extends State<PayCard> {
               'Add new card',
             style: Styles.textStyle15.copyWith(fontSize: 18 , color: Colors.black),
           ),
-          SizedBox(height: 40,),
+          SizedBox(height: 50,),
           Text(
             'Card Number',
             style: Styles.textStyle22.copyWith(fontSize: 12),

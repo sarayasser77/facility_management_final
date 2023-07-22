@@ -1,18 +1,21 @@
 import 'package:facility_management/constants.dart';
+import 'package:facility_management/core/utilies/styles.dart';
 import 'package:flutter/material.dart';
 
-class AppBarButtom extends StatefulWidget  implements PreferredSizeWidget {
-  const AppBarButtom({Key? key}) : super(key: key);
+class AppBarButtom2 extends StatefulWidget  implements PreferredSizeWidget {
+
+  final String text;
+  const AppBarButtom2({Key? key, required this.text}) : super(key: key);
 
   @override
-  State<AppBarButtom> createState() => _AppBarButtomState();
+  State<AppBarButtom2> createState() => _AppBarButtom2State();
 
   @override
   // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
 
-class _AppBarButtomState extends State<AppBarButtom> {
+class _AppBarButtom2State extends State<AppBarButtom2> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -49,36 +52,35 @@ class _AppBarButtomState extends State<AppBarButtom> {
                 ),
               ),
             ),
+            Text(
+              widget.text,
+              style: Styles.textStyle15.copyWith(fontSize: 16 , color: Colors.black),
+            ),
             Expanded(
               child: Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  width: 70,
-                  height: 70,
-                  decoration: const BoxDecoration(
-                    color: lightWhiteColor,
-                    borderRadius: BorderRadius.all(Radius.elliptical(5, 5)),
+                  width: 50,
+                  height: 90,
+                  decoration:  BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: const BorderRadius.all(Radius.elliptical(3, 3)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Set the shadow color
+                        spreadRadius: 2, // Set the spread radius of the shadow
+                        blurRadius: 6, // Set the blur radius of the shadow
+                        offset: Offset(0, 3), // Set the offset of the shadow
+                      ),
+                    ],
                   ),
-                  child: Center(
-                    child: const Text(
-                      'العربية',
-
-                         ),
+                  child: Image.asset(
+                      'assets/images/noticon.png',
+                    fit: BoxFit.contain,
+                  ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(width: 8),
-            // ClipOval(
-            //   child: Container(
-            //     width: 40,
-            //     height: 40,
-            //     color: lightWhiteColor,
-            //     child: const Text(
-            //       'العربية',
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
