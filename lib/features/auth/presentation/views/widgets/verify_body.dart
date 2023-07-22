@@ -1,4 +1,5 @@
 import 'package:facility_management/core/utilies/styles.dart';
+import 'package:facility_management/features/auth/presentation/views/widgets/verify_otp.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -15,36 +16,45 @@ class VerifyBody extends StatefulWidget {
 class _VerifyBodyState extends State<VerifyBody> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-            'Verification',
-          style: Styles.textStyle27,
-        ),
-        SizedBox(
-          height: 15,
-        ),
-        Text(
-            'Enter 4-digit number that sent to +2011221****',
-          style: Styles.textStyle22,
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        Row(
-          children: [
-
-          ],
-        ),
-        SizedBox(height: 15,),
-        CustomButton(
-          backgroundColor: kPrimaryColor,
-          text: 'Continue',
-          func: () {
-            GoRouter.of(context).push('/homeView');
-          },
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30 , vertical: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+              'Verification',
+            style: Styles.textStyle27,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Text(
+              'Enter 4-digit number that',
+            style: Styles.textStyle22,
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Text(
+            'sent to +2011221****',
+            style: Styles.textStyle22,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          const VerifyOtp(),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 40),
+            child: CustomButton(
+              backgroundColor: kPrimaryColor,
+              text: 'Continue',
+              func: () {
+                GoRouter.of(context).push('/homeView');
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
