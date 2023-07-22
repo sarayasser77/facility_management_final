@@ -21,7 +21,7 @@ abstract class Styles {
     color: Colors.black,
   );
   static const textStyle12 = TextStyle(
-    fontSize:16,
+    fontSize:12,
     fontWeight: FontWeight.w500, //meduim
     color: Colors.black,
   );

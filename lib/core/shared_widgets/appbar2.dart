@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 class AppBarButtom2 extends StatefulWidget  implements PreferredSizeWidget {
 
   final String text;
-  const AppBarButtom2({Key? key, required this.text}) : super(key: key);
+  Widget? columnText;
+   AppBarButtom2({Key? key, required this.text,this.columnText}) : super(key: key);
 
   @override
   State<AppBarButtom2> createState() => _AppBarButtom2State();
@@ -52,10 +53,10 @@ class _AppBarButtom2State extends State<AppBarButtom2> {
                 ),
               ),
             ),
-            Text(
+            widget.columnText==null? Text(
               widget.text,
               style: Styles.textStyle15.copyWith(fontSize: 16 , color: Colors.black),
-            ),
+            ) : widget.columnText!,
             Expanded(
               child: Align(
                 alignment: Alignment.centerRight,
