@@ -1,4 +1,5 @@
 import 'package:facility_management/core/utilies/styles.dart';
+import 'package:facility_management/features/chat/presentation/views/widgets/stack_body.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
@@ -15,67 +16,22 @@ class ChatBody extends StatefulWidget {
 class _ChatBodyState extends State<ChatBody> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView (
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Name*',
-              style: Styles.textStyle22.copyWith(fontSize: 12)
-            ),
-            SizedBox(height: 8,),
-            defaultText(
-                type: TextInputType.text,
-            ),
-            SizedBox(height: 13,),
-            Text(
-                'Email*',
-                style: Styles.textStyle22.copyWith(fontSize: 12)
-            ),
-            SizedBox(height: 8,),
-            defaultText(
-              type: TextInputType.text,
-            ),
-            SizedBox(height: 13,),
-            Text(
-                'Number*',
-                style: Styles.textStyle22.copyWith(fontSize: 12)
-            ),
-            SizedBox(height: 8,),
-            defaultText(
-              type: TextInputType.text,
-              hint: 'Complaint',
-            ),
-            SizedBox(height: 13,),
-            Text(
-                'Your Inquire*',
-                style: Styles.textStyle22.copyWith(fontSize: 12),
-            ),
-            SizedBox(height: 8,),
-            defaultText(
-              type: TextInputType.text,
-            ),
-            SizedBox(height: 13,),
-            Text(
-              'Inquire details*',
-              style: Styles.textStyle22.copyWith(fontSize: 12),
-            ),
-            SizedBox(height: 8,),
-            defaultText(
-              type: TextInputType.text,
-              lines: 8,
-            ),
-            SizedBox(height: 20,),
-            CustomButton(
+    return Padding(
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width/20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(child: ChatStack()),
+          SizedBox(
+            height: MediaQuery.of(context).size.height/14,
+          ),
+          CustomButton(
               width: MediaQuery.of(context).size.width*.7,
-                backgroundColor: kPrimaryColor,
-                text: 'Send',
-                func: (){}
-            ),
-          ],
-        ),
+              backgroundColor: kPrimaryColor,
+              text: 'Send',
+              func: (){}
+          ),
+        ],
       ),
     );
   }

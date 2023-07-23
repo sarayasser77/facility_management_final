@@ -16,7 +16,7 @@ class ListFlat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.symmetric(vertical: 16.0,horizontal: 8),
             child: SizedBox(
               height: 100,
               child: ListView.builder(
@@ -24,7 +24,7 @@ class ListFlat extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8),
+                      padding: EdgeInsets.symmetric(horizontal: 10),
                       child: HomeItem(
                         imagePath: AssetImage(items[index].imagePath) ,
                         text: items[index].text,

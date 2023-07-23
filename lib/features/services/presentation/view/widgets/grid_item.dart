@@ -7,8 +7,18 @@ class GridItem extends StatelessWidget {
  int index=0;
   @override
   Widget build(BuildContext context) {
-    return HomeItem(text:services[index] , imagePath: AssetImage(AssetData.services[index]),);
+    return HomeItem(
+      text: services[index],
+      imagePath: AssetImage(AssetData.services[index]),
+    );
   }
-  final services=["Water","Electricity","Maintenance","Parking","Club Renewal","Others"];
 
+   final services = [
+    "Water",
+    "Electricity",
+    "Maintenance",
+    "Parking",
+    "Club Renewal",
+    "Others"
+  ];
 }

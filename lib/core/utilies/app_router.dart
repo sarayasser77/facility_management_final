@@ -2,9 +2,12 @@
 import 'package:facility_management/features/auth/presentation/views/register_view.dart';
 import 'package:facility_management/features/auth/presentation/views/sign_up_view.dart';
 import 'package:facility_management/features/auth/presentation/views/verify_view.dart';
+import 'package:facility_management/features/chat/presentation/views/chat_view.dart';
 
 import 'package:facility_management/features/home/presentation/views/home_view.dart';
 import 'package:facility_management/features/payment/presentation/views/pay_view.dart';
+import 'package:facility_management/features/services/presentation/view/flat_view.dart';
+import 'package:facility_management/features/services/presentation/view/services_view.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/boarding/presentation/view/boarding_view.dart';
@@ -18,7 +21,7 @@ abstract class AppRouter{
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context , state) => const PaymentView(),
+      builder: (context , state) => const HomeView(),
     ),
     GoRoute(
       path: '/signView',

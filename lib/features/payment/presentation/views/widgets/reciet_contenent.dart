@@ -10,7 +10,7 @@ class Receit extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text("Payment Successful",style: Styles.textStyle16,),
+        const Text("Payment Successful",style: Styles.textStyle16,),
         SizedBox(height: MediaQuery.of(context).size.height/100,),
         Text("Bill number : B83423478",style: Styles.textStyle12.copyWith(color: LIGHT_GREY),),
         SizedBox(height: MediaQuery.of(context).size.height/20,),

@@ -2,6 +2,8 @@ import 'package:facility_management/core/shared_widgets/button_appbar.dart';
 import 'package:facility_management/features/chat/presentation/views/widgets/chat_body.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/shared_widgets/appbar2.dart';
+
 class ChatView extends StatelessWidget {
   const ChatView({Key? key}) : super(key: key);
 
@@ -9,7 +11,7 @@ class ChatView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBarButtom(),
+        appBar: AppBarButtom2(text: 'Message center',),
         body: ChatBody(),
       ),
     );
