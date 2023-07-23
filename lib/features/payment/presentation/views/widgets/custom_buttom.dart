@@ -25,7 +25,7 @@ class CustomImageButton extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           border: Border.all(
-            color: isSelected ? kPrimaryColor : const Color(0xFFC4C4C4),
+            color: isSelected ? kPrimaryColor : LIGHT_GREY,
             width: 1,
           ),
           borderRadius: BorderRadius.circular(10),

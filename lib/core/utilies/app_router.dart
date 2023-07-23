@@ -18,7 +18,7 @@ abstract class AppRouter{
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context , state) => const PaymentView(),
+      builder: (context , state) => const HomeView(),
     ),
     GoRoute(
       path: '/signView',
