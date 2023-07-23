@@ -1,5 +1,5 @@
 import 'package:facility_management/constants.dart';
-import 'package:facility_management/features/successful/presentation/views/widgets/reciet_contenent.dart';
+import 'package:facility_management/features/payment/presentation/views/widgets/reciet_contenent.dart';
 import 'package:flutter/material.dart';
 class SuccessStack extends StatelessWidget {
   const SuccessStack({Key? key}) : super(key: key);

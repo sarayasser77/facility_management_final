@@ -1,4 +1,5 @@
-import 'package:facility_management/features/successful/presentation/views/widgets/success_body.dart';
+
+import 'package:facility_management/features/payment/presentation/views/widgets/success_body.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/shared_widgets/appbar2.dart';
