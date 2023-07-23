@@ -1,9 +1,11 @@
 import 'package:facility_management/core/shared_widgets/appbar2.dart';
+import 'package:facility_management/core/shared_widgets/sponsers_list.dart';
 import 'package:facility_management/features/home/presentation/views/widgets/search.dart';
 import 'package:facility_management/features/home/presentation/views/widgets/service_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utilies/styles.dart';
+import 'image_stack.dart';
 import 'list_myflat.dart';
 
 class HomeBody extends StatefulWidget {
@@ -26,7 +28,11 @@ class _HomeBodyState extends State<HomeBody> {
             children:  [
               Search(),
               SizedBox(
-                height: 50,
+                height: 10,
+              ),
+              ImageStack(),
+              SizedBox(
+                height: 30,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
@@ -34,6 +40,9 @@ class _HomeBodyState extends State<HomeBody> {
                   'My Flats',
                   style: Styles.textStyle15.copyWith(fontSize: 16, color: Colors.black),
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
               ListFlat(),
               SizedBox(
@@ -47,13 +56,33 @@ class _HomeBodyState extends State<HomeBody> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               ServiceList(),
+              SizedBox(
+                height: 50,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Our Sponsors',
+                  style: Styles.textStyle15.copyWith(fontSize: 16 , color: Colors.black),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              // SponsersList(),
             ],
           ),
         ),
         ),
+        // SliverFillRemaining(
+        //   child: Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 30),
+        //     child: SponsersList(),
+        //   ),
+        // ),
       ],
     );
   }

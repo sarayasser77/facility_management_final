@@ -13,9 +13,13 @@ class FlatView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBarButtom2(text: '',columnText: Column(
+        appBar: AppBarButtom2(
+          text: '',
+          columnText: Column(
           children: [
-            Text("My Flat",style:Styles.textStyle16 ),
+            const Text(
+                "My Flat",style:Styles.textStyle16
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 2.0),
               child: Text("Madinty",style:Styles.textStyle12.copyWith(color:LIGHT_GREY ) ),

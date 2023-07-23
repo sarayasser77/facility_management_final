@@ -10,30 +10,31 @@ class HomeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 100,
-      height: 100,
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-      decoration:  BoxDecoration(
-        shape: BoxShape.rectangle,
-        border: Border.all(
-          color: LIGHT_GREY,
-          width: 1,
+    return AspectRatio(
+      aspectRatio: 2.6/1.3,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        decoration:  BoxDecoration(
+          shape: BoxShape.rectangle,
+          border: Border.all(
+            color: LIGHT_GREY,
+            width: 1,
+          ),
+          borderRadius: BorderRadius.circular(10),
         ),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-              image: imagePath,
-          ),
-          const SizedBox(height: 10,),
-          Text(
-            text,
-            style: Styles.textStyle22.copyWith(fontSize: 14),
-          ),
-        ],
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+                image: imagePath,
+            ),
+            const SizedBox(height: 10,),
+            Text(
+              text,
+              style: Styles.textStyle22.copyWith(fontSize: 14),
+            ),
+          ],
+        ),
       ),
     );
   }
