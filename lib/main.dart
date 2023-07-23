@@ -1,4 +1,5 @@
 import 'package:facility_management/features/services/presentation/view/services_view.dart';
+import 'package:facility_management/features/splash/splash_screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,20 +18,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp.router(
-              routerConfig: AppRouter.router,
-              debugShowCheckedModeBanner: false,
-              theme: ThemeData(
-                textTheme: GoogleFonts.robotoTextTheme(),
-              ),
-            );
+    return   MaterialApp.router(
+                  routerConfig: AppRouter.router,
+                  debugShowCheckedModeBanner: false,
+                  theme: ThemeData(
+                    textTheme: GoogleFonts.robotoTextTheme(),
+                  ),
+                );
 
-    // return MaterialApp(
-    //           theme: ThemeData(
-    //             textTheme: GoogleFonts.robotoTextTheme(),
-    //           ),
-    //           home: FlatView(),
-    //         );
+
+    //             MaterialApp(
+    //               theme: ThemeData(
+    //                 textTheme: GoogleFonts.robotoTextTheme(),
+    //               ),
+    //               home: SplashScreen(),
+    //             );
   }
 }
 

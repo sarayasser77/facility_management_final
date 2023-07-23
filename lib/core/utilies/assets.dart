@@ -13,4 +13,10 @@ class AssetData {
     "assets/icons/download (1).png",
     "assets/icons/download (10).png",
   ];
+
+  static const splash=[
+    "assets/images/img.png",
+    "assets/images/img_2.png",
+    "assets/images/img_1.png"
+  ];
 }
