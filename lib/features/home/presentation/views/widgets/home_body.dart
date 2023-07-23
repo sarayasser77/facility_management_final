@@ -77,12 +77,16 @@ class _HomeBodyState extends State<HomeBody> {
           ),
         ),
         ),
-        // SliverFillRemaining(
-        //   child: Padding(
-        //     padding: EdgeInsets.symmetric(horizontal: 30),
-        //     child: SponsersList(),
-        //   ),
-        // ),
+        SliverFillRemaining(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: AspectRatio(
+              aspectRatio: 2.3/1,
+              child: SponsersList(
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }

@@ -5,6 +5,8 @@ import 'package:facility_management/features/payment/presentation/views/widgets/
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'image_stack2.dart';
+
 class PayBody extends StatefulWidget {
   const PayBody({Key? key}) : super(key: key);
 
@@ -20,47 +22,22 @@ class _PayBodyState extends State<PayBody> {
       children: [
        Expanded(
          flex: 2,
-           child: Center(
-            child: Stack(
-              children: [
-                Image.asset(
-                  'assets/icons/Group 1060.png',
-                  width: 300,
-                  height: 300,
-                ),
-                Positioned(
-                  top: 120,
-                  left: 80,
-                  child: Column(
-                    children: [
-                      Text(
-                        'Total Balance',
-                        style: Styles.textStyle22.copyWith(fontSize: 13 , color: Colors.white),
-                      ),
-                      SizedBox(height: 5,),
-                      Text(
-                        '14,234.00 EGP',
-                        style: Styles.textStyle20.copyWith(color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-           )),
+           child: StackImage()),
         Expanded(
             flex:3 ,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                      'Choose your payment method',
-                    style: Styles.textStyle15.copyWith(fontSize: 18 , color: Colors.black),
-                  ),
-                  const RadioCheck2(),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                        'Choose your payment method',
+                      style: Styles.textStyle15.copyWith(fontSize: 18 , color: Colors.black),
+                    ),
+                    const RadioCheck2(),
+                  ],
+                ),
               ),
             ),),
         Expanded(
