@@ -1,4 +1,5 @@
 import 'package:facility_management/core/utilies/styles.dart';
+import 'package:facility_management/features/chat/presentation/views/success_view.dart';
 import 'package:facility_management/features/chat/presentation/views/widgets/stack_body.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,12 @@ class _ChatBodyState extends State<ChatBody> {
               width: MediaQuery.of(context).size.width*.7,
               backgroundColor: kPrimaryColor,
               text: 'Send',
-              func: (){}
+              func: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ChatSuccess()),
+                );
+              }
           ),
         ],
       ),

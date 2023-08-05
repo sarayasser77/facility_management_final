@@ -19,6 +19,7 @@ class _HomeBodyState extends State<HomeBody> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
        child: Padding(
@@ -72,20 +73,18 @@ class _HomeBodyState extends State<HomeBody> {
               SizedBox(
                 height: 10,
               ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: AspectRatio(
+                  aspectRatio: 2.3/1,
+                  child: SponsersList(
+                  ),
+                ),
+              ),
               // SponsersList(),
             ],
           ),
         ),
-        ),
-        SliverFillRemaining(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: AspectRatio(
-              aspectRatio: 2.3/1,
-              child: SponsersList(
-              ),
-            ),
-          ),
         ),
       ],
     );

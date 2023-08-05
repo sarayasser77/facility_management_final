@@ -1,6 +1,4 @@
 import 'package:facility_management/core/utilies/styles.dart';
-import 'package:facility_management/features/auth/presentation/views/register_view.dart';
-import 'package:facility_management/features/auth/presentation/views/sign_up_view.dart';
 import 'package:facility_management/features/boarding/presentation/data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

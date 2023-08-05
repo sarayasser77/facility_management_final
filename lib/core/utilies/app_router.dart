@@ -3,6 +3,7 @@ import 'package:facility_management/features/auth/presentation/views/register_vi
 import 'package:facility_management/features/auth/presentation/views/sign_up_view.dart';
 import 'package:facility_management/features/auth/presentation/views/verify_view.dart';
 import 'package:facility_management/features/chat/presentation/views/chat_view.dart';
+import 'package:facility_management/features/chat/presentation/views/success_view.dart';
 
 import 'package:facility_management/features/home/presentation/views/home_view.dart';
 import 'package:facility_management/features/payment/presentation/views/pay_view.dart';
@@ -14,6 +15,7 @@ import '../../features/boarding/presentation/view/boarding_view.dart';
 import '../../features/home/presentation/views/widgets/bottom_nav.dart';
 import '../../features/payment/presentation/views/pay_card.dart';
 import '../../features/payment/presentation/views/success_view.dart';
+import '../../features/splash/splash_screen1.dart';
 
 
 
@@ -22,11 +24,15 @@ abstract class AppRouter{
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context , state) => const BottomNavBar(),
+      builder: (context , state) => const   ChatSuccess(),
     ),
     GoRoute(
       path: '/signView',
       builder: (context , state) => const SignUpView(),
+    ),
+    GoRoute(
+      path: '/bottomNav',
+      builder: (context , state) => const BottomNavBar(),
     ),
     GoRoute(
       path: '/registerView',

@@ -19,4 +19,5 @@ class AssetData {
     "assets/images/img_2.png",
     "assets/images/img_1.png"
   ];
+  static const penIcon = 'assets/icons/Layer 92.png';
 }

@@ -1,12 +1,9 @@
-import 'package:facility_management/features/services/presentation/view/services_view.dart';
-import 'package:facility_management/features/splash/splash_screen1.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/utilies/app_router.dart';
-import 'features/auth/presentation/views/sign_up_view.dart';
-import 'features/services/presentation/view/flat_view.dart';
-import 'features/payment/presentation/views/success_view.dart';
+
 
 void main() {
   runApp(const MyApp());

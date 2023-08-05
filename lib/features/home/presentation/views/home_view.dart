@@ -11,8 +11,7 @@ class HomeView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBarButtom2(text: 'Pay a bill',),
-        body:
-        HomeBody(),
+        body: HomeBody(),
       ),
     );
   }

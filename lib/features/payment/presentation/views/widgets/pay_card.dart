@@ -1,6 +1,7 @@
 import 'package:facility_management/constants.dart';
 import 'package:facility_management/core/shared_widgets/custom_buttom.dart';
 import 'package:facility_management/core/shared_widgets/text_field.dart';
+import 'package:facility_management/core/utilies/assets.dart';
 import 'package:facility_management/core/utilies/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +34,7 @@ class _PayCardState extends State<PayCard> {
           SizedBox(height: 8,),
           defaultText(
               type: TextInputType.text,
+            prefixImageAsset: AssetData.penIcon,
           ),
           SizedBox(height: 8,),
           Row(

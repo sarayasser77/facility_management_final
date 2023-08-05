@@ -52,11 +52,13 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
               selectedColor: kPrimaryColor,
             ),
             DotNavigationBarItem(
-              icon: Icon(Icons.favorite_border),
+              icon: Image.asset(
+                  'assets/icons/vuesax-bold-graph.png',
+                      ),
               selectedColor: kPrimaryColor,
             ),
             DotNavigationBarItem(
-              icon: Icon(Icons.perm_identity_outlined),
+              icon: Icon(Icons.person),
               selectedColor: kPrimaryColor,
             ),
           ],
