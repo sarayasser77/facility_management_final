@@ -27,7 +27,9 @@ class _HomeBodyState extends State<HomeBody> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              Search(),
+              Search(
+                text: 'Search for service, offer',
+              ),
               SizedBox(
                 height: 10,
               ),

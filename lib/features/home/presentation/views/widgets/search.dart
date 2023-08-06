@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Search extends StatelessWidget {
-  const Search({Key? key}) : super(key: key);
+  final String text;
+  const Search({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class Search extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(15),
               ),
-              hintText: 'Search for service, offer',
+              hintText: text,
               prefixIcon: IconButton(
                 onPressed: () {},
                 icon: const Opacity(
