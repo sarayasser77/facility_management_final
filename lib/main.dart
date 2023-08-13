@@ -1,4 +1,5 @@
 
+import 'package:facility_management/features/setting/presentation/viewmodel/addtonotificationcubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return   MultiBlocProvider(
       providers: [
-
+BlocProvider(create: (context)=>AddCubit())
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
