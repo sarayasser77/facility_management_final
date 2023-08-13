@@ -2,9 +2,6 @@ import 'package:facility_management/constants.dart';
 import 'package:facility_management/core/shared_widgets/custom_buttom.dart';
 import 'package:facility_management/features/setting/presentation/viewmodel/addcubitstates.dart';
 import 'package:facility_management/features/setting/presentation/viewmodel/addtonotificationcubit.dart';
-import 'package:facility_management/features/setting/presentation/views/Gate_notification.dart';
-import 'package:facility_management/features/setting/presentation/views/widgets/Usernotification.dart';
-import 'package:facility_management/features/setting/presentation/views/widgets/datamodel.dart';
 import 'package:facility_management/features/setting/presentation/views/widgets/fully_gate_notification.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,12 +11,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/shared_widgets/text_field.dart';
 import 'inputNewGate.dart';
 
-class Create_New_Gate extends StatelessWidget {
+class Create_New_Gate extends StatefulWidget {
 
-TextEditingController? unitNameController;
-TextEditingController? requestDataController;
-TextEditingController? serviceProviderController;
-final cubit=AddCubit();
+  @override
+  State<Create_New_Gate> createState() => _Create_New_GateState();
+}
+
+class _Create_New_GateState extends State<Create_New_Gate> {
+var unitNameController=TextEditingController();
+
+var requestDataController=TextEditingController();
+
+var serviceProviderController=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AddCubit,AddtoNotification>(
@@ -48,12 +52,15 @@ final cubit=AddCubit();
              child: CustomButton(backgroundColor: kPrimaryColor, text: "Notify Gate",
                func: () {
 
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Gate_Notification_View(
-                    nav: (){
-                       cubit.addtonoti(DataModel(unitName: unitNameController!.text.toString(), Date: requestDataController!.text.toString()),);
-                    },
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=>
+                      Fully_Gate_Notification(
+                    name: unitNameController.text, date: requestDataController.text,
+                    details: serviceProviderController.text
 
-                 )));
+                 )
+
+                  ));
                }, width: double.infinity,height: 55.h,),
            )
          ],

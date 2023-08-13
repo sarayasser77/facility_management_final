@@ -30,7 +30,7 @@ class List_Setting extends StatelessWidget {
 
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context)=>Gate_Notification_View(nav: (){},)
+                    builder: (context)=>Empty_Gate_Notification_View()
                 ));
               },
 

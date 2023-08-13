@@ -6,7 +6,7 @@ import '../../../../../core/shared_widgets/text_field.dart';
 class InputNewGate extends StatelessWidget {
  InputNewGate({required this.text,required this.controller});
 String? text;
-TextEditingController? controller;
+var controller=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Column(

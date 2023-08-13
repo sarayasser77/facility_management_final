@@ -11,7 +11,7 @@ import '../../../../../core/shared_widgets/custom_buttom.dart';
 import '../new_gate.dart';
 import 'fully_gate_notification.dart';
 
-class UserNotificationListView extends StatelessWidget {
+class EmptyNotificationListView extends StatelessWidget {
   @override
 
   final cubit=AddCubit();
@@ -20,10 +20,10 @@ class UserNotificationListView extends StatelessWidget {
       builder: (context,state){
         return
 
-        cubit.notification.isEmpty?
         Column(
-          children: [
 
+          children: [
+  const Spacer(flex: 3,),
               const Text("You don't have any invitations at\n \n           that moment",style: TextStyle(color: LIGHT_GREY)),
             Spacer(flex: 2,),
             Padding(
@@ -37,14 +37,8 @@ class UserNotificationListView extends StatelessWidget {
             ),
             Spacer()
           ],
-        )
-            :ListView.builder(
-            itemCount: cubit.notification.length,
-            itemBuilder: (context,index){
-              return   Fully_Gate_Notification(model: cubit.notification[index]);
-
-            }
         );
+
       },
       listener: (context,state){
 

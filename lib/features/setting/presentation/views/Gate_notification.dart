@@ -4,17 +4,16 @@ import 'package:facility_management/features/setting/presentation/views/widgets/
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Gate_Notification_View extends StatelessWidget {
-Gate_Notification_View({required this.nav});
+class Empty_Gate_Notification_View extends StatelessWidget {
 
-  Function nav;
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
 appBar: AppBarButtom2(text: 'Gate Notification',),
-        body: UserNotificationListView()
+        body: EmptyNotificationListView()
 
       ),
     );
