@@ -26,4 +26,22 @@ class AssetData {
     "assets/images/svgexport-7 (3).png",
     "assets/images/svgexport-7 (4).png",
   ];
+
+static const homeServices1 = [
+  "assets/images/Group 1067.png",
+  "assets/images/Path 237.png",
+  "assets/images/Path 375.png",
+  "assets/images/Group 859.png",
+  "assets/images/Group 859.png",
+
+] ;
+
+  static const homeServices2 = [
+    "assets/images/Group 10671.png",
+    "assets/images/Path 381.png",
+    "assets/images/building.png",
+    "assets/images/vuesax-bold-building.png",
+    "assets/images/vuesax-bold-1building.png",
+
+  ] ;
 }

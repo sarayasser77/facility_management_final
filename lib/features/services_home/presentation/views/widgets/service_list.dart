@@ -27,8 +27,9 @@ class ServiceList extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return  Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: HomeItem(
+                  num: 2.8,
                   imagePath: AssetImage(AssetData.services[index]),
                   text: services[index],
                 ),

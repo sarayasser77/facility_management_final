@@ -1,7 +1,7 @@
 import 'package:facility_management/core/shared_widgets/appbar2.dart';
 import 'package:facility_management/core/shared_widgets/sponsers_list.dart';
-import 'package:facility_management/features/home/presentation/views/widgets/search.dart';
-import 'package:facility_management/features/home/presentation/views/widgets/service_list.dart';
+import 'package:facility_management/features/services_home/presentation/views/widgets/search.dart';
+import 'package:facility_management/features/services_home/presentation/views/widgets/service_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utilies/styles.dart';

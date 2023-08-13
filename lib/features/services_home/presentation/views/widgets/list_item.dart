@@ -6,13 +6,15 @@ class HomeItem extends StatelessWidget {
 
   final String text;
   final ImageProvider<Object> imagePath;
-  const HomeItem({Key? key, required this.text, required this.imagePath}) : super(key: key);
-
+  const HomeItem({Key? key, required this.text, required this.imagePath , required this.num}) : super(key: key);
+final double num ;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.6/1.3,
+      aspectRatio: num/1.3,
       child: Container(
+        height: MediaQuery.of(context).size.height*0.6,
+
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         decoration:  BoxDecoration(
           shape: BoxShape.rectangle,

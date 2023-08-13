@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home/presentation/views/widgets/list_item.dart';
-import '../../../../home/presentation/views/widgets/list_model.dart';
+import '../../../../services_home/presentation/views/widgets/list_item.dart';
+import '../../../../services_home/presentation/views/widgets/list_model.dart';
 
 
 
@@ -30,6 +30,7 @@ class ListHistory extends StatelessWidget {
                 return  Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: HomeItem(
+                    num: 2.8,
                     imagePath: AssetImage(items[index].imagePath) ,
                     text: items[index].text,
                   ),
