@@ -1,10 +1,11 @@
 import 'package:facility_management/constants.dart';
 import 'package:facility_management/features/chat/presentation/views/chat_view.dart';
-import 'package:facility_management/features/home/presentation/views/home_view.dart';
 import 'package:facility_management/features/pay_history/presentation/views/history1_view.dart';
 import 'package:facility_management/features/payment/presentation/views/pay_view.dart';
 import 'package:flutter/material.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+
+import '../home_view.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);

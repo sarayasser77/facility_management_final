@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../home/presentation/views/widgets/list_item.dart';
-import '../../../../home/presentation/views/widgets/list_model.dart';
+import '../../../../services_home/presentation/views/widgets/list_item.dart';
+import '../../../../services_home/presentation/views/widgets/list_model.dart';
 
 
 
