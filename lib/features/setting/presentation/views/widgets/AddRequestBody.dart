@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/shared_widgets/CutomTabBar.dart';
-import 'griditem.dart';
 
 class Add_Request_Body extends StatelessWidget {
   const Add_Request_Body({
@@ -13,11 +12,6 @@ class Add_Request_Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        SizedBox(height: 10.h,),
-        Custom_TabBar(),
-      ],
-    );
+    return Custom_TabBar();
   }
 }
