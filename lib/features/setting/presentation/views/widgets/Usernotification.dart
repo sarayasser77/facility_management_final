@@ -40,7 +40,7 @@ class EmptyNotificationListView extends StatelessWidget {
                 backgroundColor: kPrimaryColor, text: 'Create New Gate Notification ', func: () {
                 Navigator.push(context,
                     PageTransition(child: New_Gate(),
-                    type: PageTransitionType.topToBottom,duration: Duration(seconds: 1))
+                    type: PageTransitionType.topToBottom,duration: Duration(seconds: 2))
 
 
                 );

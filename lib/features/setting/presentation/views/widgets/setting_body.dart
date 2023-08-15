@@ -21,9 +21,10 @@ class SettingBody extends StatelessWidget {
             elevation: 5,
             shadowColor: Colors.black,
             child: defaultText(
+              prefix: Icons.search_outlined,
                 type: TextInputType.text,
-                hint: "search",
-                borderWidth: .005
+                hint: "search for services,offer...",
+                borderWidth: .002
 
             ),
           ),

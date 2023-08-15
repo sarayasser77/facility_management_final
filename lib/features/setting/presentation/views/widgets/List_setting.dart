@@ -3,6 +3,7 @@ import 'package:facility_management/features/setting/presentation/views/add_requ
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wave_transition/wave_transition.dart';
 
 import 'card_setting.dart';
 import 'listmodel_setting.dart';
@@ -27,14 +28,22 @@ class List_Setting extends StatelessWidget {
             GestureDetector(
 
               child: card_setting(
-                  icon: items[index].icon,
+                  icon:items[index].icon,
                   txt: items[index].text),
 
               onTap: (){
               index==0?
               Navigator.push(
-                  context, PageTransition(child: Empty_Gate_Notification_View(),
-                  type: PageTransitionType.leftToRightWithFade,duration: Duration(seconds: 1)))
+                  context,
+                  WaveTransition(child: Empty_Gate_Notification_View(), center: FractionalOffset(0.90,0.90),
+                      duration: Duration(milliseconds: 2000),
+                  settings: RouteSettings(arguments: "it works")
+                  )
+                  // PageTransition(child: Empty_Gate_Notification_View(),
+                  // type: PageTransitionType.leftToRightWithFade,duration: Duration(seconds: 1))
+              )
+
+
                   :Navigator.push(context, PageTransition(child: Add_Request_View(),
                   type: PageTransitionType.leftToRightWithFade,duration: Duration(seconds: 1)));
               },
