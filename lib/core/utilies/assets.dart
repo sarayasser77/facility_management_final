@@ -1,3 +1,5 @@
+import 'package:facility_management/features/home/views/discoverScreen.dart';
+
 class AssetData {
   static const services = [
     "assets/icons/Rectangle 201.png",
@@ -27,6 +29,7 @@ class AssetData {
     "assets/images/svgexport-7 (4).png",
   ];
 
+
   static const setting=[
    "assets/icons/setting1.png",
     "assets/icons/setting2.png",
@@ -37,6 +40,50 @@ class AssetData {
     "assets/icons/setting7.png"
 
   ];
+
+static const homeServices1 = [
+  "assets/images/Group 1067.png",
+  "assets/images/Path 237.png",
+  "assets/images/Path 375.png",
+  "assets/images/Group 859.png",
+  "assets/images/Group 859.png",
+
+] ;
+
+  static const homeServices2 = [
+    "assets/images/Group 10671.png",
+    "assets/images/Path 381.png",
+    "assets/images/building.png",
+    "assets/images/vuesax-bold-building.png",
+    "assets/images/vuesax-bold-1building.png",
+
+  ] ;
+  static const discoverScreenImages = [
+    "assets/images/furnitureImages/Mask Group 9.png",
+    "assets/images/furnitureImages/Mask Group 91.png",
+    "assets/images/furnitureImages/Mask Group 92.png",
+    "assets/images/furnitureImages/Mask Group 93.png",
+    "assets/images/furnitureImages/Mask Group 95.png",
+  ];
+
+  static const discoverScreenAddress = [
+    "Laval",
+    "La-z-boy",
+    "Home Furniture",
+    "Decor",
+    "Urban",
+  ];
+  static const discoverScreenListviewImages1 = [
+    "assets/images/furnitureImages/svgexport-7 (50).png",
+    "assets/images/furnitureImages/svgexport-7 (49).png",
+
+  ] ;
+
+  static const discoverScreenListviewImages2 = [
+    "assets/images/furnitureImages/svgexport-7 (47).png",
+    "assets/images/furnitureImages/svgexport-7 (48).png",
+
+  ] ;
 
 
 }

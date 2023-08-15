@@ -8,6 +8,7 @@ class GridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HomeItem(
+      num: 2.8,
       text: services[index],
       imagePath: AssetImage(AssetData.services[index]),
     );

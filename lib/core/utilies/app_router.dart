@@ -4,6 +4,7 @@ import 'package:facility_management/features/auth/presentation/views/sign_up_vie
 import 'package:facility_management/features/auth/presentation/views/verify_view.dart';
 import 'package:facility_management/features/chat/presentation/views/chat_view.dart';
 import 'package:facility_management/features/chat/presentation/views/success_view.dart';
+import 'package:facility_management/features/home/views/homePage.dart';
 
 import 'package:facility_management/features/pay_history/presentation/views/history1_view.dart';
 import 'package:facility_management/features/payment/presentation/views/pay_view.dart';
@@ -26,7 +27,7 @@ abstract class AppRouter{
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context , state) =>   SettingView()
+      builder: (context , state) => const  HomePage(),
     ),
     GoRoute(
       path: '/signView',

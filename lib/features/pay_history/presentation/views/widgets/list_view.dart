@@ -30,6 +30,7 @@ class ListHistory extends StatelessWidget {
                 return  Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: HomeItem(
+                    num: 2.8,
                     imagePath: AssetImage(items[index].imagePath) ,
                     text: items[index].text,
                   ),
