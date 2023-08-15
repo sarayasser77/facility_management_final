@@ -13,7 +13,7 @@ class SettingView extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBarButtom2(text: 'More Information'),
-        body:FadeAnimation(3,child:  SettingBody(),)
+        body:FadeAnimation(1,child:  SettingBody(),)
       ),
     );
   }

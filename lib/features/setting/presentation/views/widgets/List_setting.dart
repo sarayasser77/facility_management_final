@@ -21,7 +21,7 @@ class List_Setting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500,
+      height: 450,
       child: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context,index)=>

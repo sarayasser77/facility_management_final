@@ -41,6 +41,10 @@ Widget defaultText({
     ),
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(
+      )
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(
         width: borderWidth!
       )
     )

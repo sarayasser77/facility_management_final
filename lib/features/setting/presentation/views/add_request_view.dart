@@ -24,7 +24,8 @@ class _Add_Request_ViewState extends State<Add_Request_View> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBarButtom2(text: "Add Request",),
-        body: FadeAnimation(3, child: Add_Request_Body(),)
+        body: FadeAnimation(3,
+          child: Add_Request_Body(),)
       ),
     );
   }

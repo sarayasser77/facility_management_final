@@ -14,23 +14,23 @@ class SettingBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-         SizedBox(height: 30.h,),
+         SizedBox(height: 20.h,),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Material(
-            elevation: 5,
+            elevation: 1,
             shadowColor: Colors.black,
             child: defaultText(
               prefix: Icons.search_outlined,
                 type: TextInputType.text,
                 hint: "search for services,offer...",
-                borderWidth: .002
-
+                   borderWidth: .001
             ),
           ),
 
 
         ),
+        SizedBox(height: 5.h,),
         List_Setting(),
 
 

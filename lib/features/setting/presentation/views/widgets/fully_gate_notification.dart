@@ -2,6 +2,7 @@ import 'package:facility_management/constants.dart';
 import 'package:facility_management/core/shared_widgets/appbar2.dart';
 import 'package:facility_management/core/shared_widgets/custom_buttom.dart';
 import 'package:facility_management/features/setting/presentation/views/new_gate.dart';
+import 'package:facility_management/features/setting/presentation/views/widgets/Createnewgate.dart';
 import 'package:facility_management/features/setting/presentation/views/widgets/datamodel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,8 @@ final String details;
              padding: const EdgeInsets.only(bottom: 30,right: 20,left: 20),
              child: CustomButton(backgroundColor: kPrimaryColor, text: "Create New Gate notification",
                  func: (){
-Navigator.pop(context);                 }, width: double.infinity),
+Navigator.push(context, MaterialPageRoute(builder: (context)=>New_Gate()));
+}, width: double.infinity),
            )
 
          ],

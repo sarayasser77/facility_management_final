@@ -1,8 +1,8 @@
 import 'package:facility_management/constants.dart';
 import 'package:facility_management/features/home/views/HomeScreen.dart';
 import 'package:facility_management/features/home/views/discoverScreen.dart';
-import 'package:facility_management/features/home/views/moreScreen.dart';
 import 'package:facility_management/features/home/views/servicesScreen.dart';
+import 'package:facility_management/features/setting/presentation/views/setting_view.dart';
 import 'package:flutter/material.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 
@@ -16,11 +16,11 @@ class BottomNavBarForHome extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBarForHome> with TickerProviderStateMixin {
   int currentIndex = 0;
-  final List<Widget> _tabs = const [
-    HomeScreen(),
-    ServicesScreen(),
-    DiscoverScreen(),
-    MoreScreen()
+  final List<Widget> _tabs =  [
+    const HomeScreen(),
+    const ServicesScreen(),
+    const DiscoverScreen(),
+    SettingView(),
   ];
   Widget currentScreen = const HomeScreen();
   @override
@@ -37,16 +37,19 @@ class _BottomNavBarState extends State<BottomNavBarForHome> with TickerProviderS
         padding: const EdgeInsets.only(bottom: 10),
         child: DotNavigationBar(
 
+          boxShadow: [BoxShadow(color: Colors.grey.shade300,blurRadius: 3,blurStyle: BlurStyle.solid)],
           currentIndex: currentIndex,
           onTap: (index){
             setState(() {
               currentIndex = index;
             });
           },
-          margin: const EdgeInsets.only(left: 10, right: 10),
+          margin: const EdgeInsets.only(left: 5, right: 5),
           // currentIndex: _SelectedTab.values.indexOf(_selectedTab),
           unselectedItemColor: Colors.grey[300],
           splashBorderRadius: 50,
+          borderRadius: 10,
+
           // onTap: _handleIndexChanged,
           dotIndicatorColor: kPrimaryColor,
           items: [
