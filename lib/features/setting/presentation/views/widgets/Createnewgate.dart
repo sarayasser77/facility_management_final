@@ -7,8 +7,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../../../core/shared_widgets/text_field.dart';
+import '../new_gate.dart';
 import 'inputNewGate.dart';
 
 class Create_New_Gate extends StatefulWidget {
@@ -56,15 +58,12 @@ var detailsController=TextEditingController();
              child: CustomButton(backgroundColor: kPrimaryColor, text: "Notify Gate",
                func: () {
 
-                  Navigator.push(context, MaterialPageRoute(
-                      builder: (context)=>
-                      Fully_Gate_Notification(
+                  Navigator.push(context,PageTransition(child: Fully_Gate_Notification(
                     name: unitNameController.text, date: requestDataController.text,
                     details: detailsController.text, service: serviceProviderController.text,
 
-                 )
-
-                  ));
+                  ),
+                      type: PageTransitionType.topToBottom,duration: Duration(seconds: 1)));
                }, width: double.infinity,height: 55.h,),
            )
          ],

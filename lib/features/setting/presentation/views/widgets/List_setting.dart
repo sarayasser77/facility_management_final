@@ -1,6 +1,8 @@
 import 'package:facility_management/features/setting/presentation/views/Gate_notification.dart';
+import 'package:facility_management/features/setting/presentation/views/add_request_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'card_setting.dart';
 import 'listmodel_setting.dart';
@@ -29,12 +31,15 @@ class List_Setting extends StatelessWidget {
                   txt: items[index].text),
 
               onTap: (){
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context)=>Empty_Gate_Notification_View()
-                ));
+              index==0?
+              Navigator.push(
+                  context, PageTransition(child: Empty_Gate_Notification_View(),
+                  type: PageTransitionType.leftToRightWithFade,duration: Duration(seconds: 1)))
+                  :Navigator.push(context, PageTransition(child: Add_Request_View(),
+                  type: PageTransitionType.leftToRightWithFade,duration: Duration(seconds: 1)));
               },
 
-
+//  Navigator.push(context,PageTransition(child: SearchScreen(), type: PageTransitionType.leftToRightWithFade,duration:const Duration(seconds: 1)))
             ),
 
       ),

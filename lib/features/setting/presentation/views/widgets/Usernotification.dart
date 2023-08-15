@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/shared_widgets/custom_buttom.dart';
@@ -37,7 +38,12 @@ class EmptyNotificationListView extends StatelessWidget {
               child: CustomButton(
                 height: 60.h,
                 backgroundColor: kPrimaryColor, text: 'Create New Gate Notification ', func: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>New_Gate()));
+                Navigator.push(context,
+                    PageTransition(child: New_Gate(),
+                    type: PageTransitionType.topToBottom,duration: Duration(seconds: 1))
+
+
+                );
 
               }, width: double.infinity,),
             ),
