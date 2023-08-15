@@ -8,11 +8,11 @@ import 'listmodel_setting.dart';
 class List_Setting extends StatelessWidget {
 
   final List<ListModelSetting> items=[
-    ListModelSetting(icon: Icons.garage_outlined, text:" Gate Notofication" ),
+    ListModelSetting(icon: Icons.garage_outlined, text:" Gate Notification" ),
     ListModelSetting(icon: Icons.message, text:" Add Request" ),
-    ListModelSetting(icon: Icons.question_mark_outlined, text:" Gate Notofication" ),
-    ListModelSetting(icon: Icons.info, text:" Gate Notofication" ),
-    ListModelSetting(icon: Icons.phone, text:" Gate Notofication" ),
+    ListModelSetting(icon: Icons.question_mark_outlined, text:"Community info" ),
+    ListModelSetting(icon: Icons.info, text:"Help center" ),
+    ListModelSetting(icon: Icons.phone, text:"Contact us" ),
   ];
 
   @override

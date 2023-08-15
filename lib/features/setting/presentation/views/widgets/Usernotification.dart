@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:facility_management/features/setting/presentation/viewmodel/addcubitstates.dart';
 import 'package:facility_management/features/setting/presentation/viewmodel/addtonotificationcubit.dart';
 import 'package:facility_management/features/setting/presentation/views/widgets/datamodel.dart';
@@ -21,11 +22,16 @@ class EmptyNotificationListView extends StatelessWidget {
         return
 
         Column(
-
           children: [
-  const Spacer(flex: 3,),
-              const Text("You don't have any invitations at\n \n           that moment",style: TextStyle(color: LIGHT_GREY)),
-            Spacer(flex: 2,),
+            const Spacer(flex: 4,),
+            DefaultTextStyle(style: const TextStyle(color: LIGHT_GREY),
+              child:AnimatedTextKit(animatedTexts: [
+                TypewriterAnimatedText("You don't have any invitations at that moment")              ],
+
+              )
+            ),
+            
+            const Spacer(flex: 3,),
             Padding(
               padding:  EdgeInsets.symmetric(horizontal: 30.h,),
               child: CustomButton(
@@ -35,7 +41,7 @@ class EmptyNotificationListView extends StatelessWidget {
 
               }, width: double.infinity,),
             ),
-            Spacer()
+            const Spacer()
           ],
         );
 

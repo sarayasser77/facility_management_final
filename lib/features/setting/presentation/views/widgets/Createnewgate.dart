@@ -24,6 +24,8 @@ var requestDataController=TextEditingController();
 
 var serviceProviderController=TextEditingController();
 
+var detailsController=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AddCubit,AddtoNotification>(
@@ -40,7 +42,9 @@ var serviceProviderController=TextEditingController();
             SizedBox(height: 15.h,),
            InputNewGate(text: 'Service provider', controller: serviceProviderController, ),
             SizedBox(height: 15.h,),
-           defaultText(type: TextInputType.text,
+           defaultText(
+               controller: detailsController,
+               type: TextInputType.text,
                borderWidth: .3,
                hint: "Extra details",
                maxLines: 9
@@ -56,7 +60,7 @@ var serviceProviderController=TextEditingController();
                       builder: (context)=>
                       Fully_Gate_Notification(
                     name: unitNameController.text, date: requestDataController.text,
-                    details: serviceProviderController.text
+                    details: detailsController.text, service: serviceProviderController.text,
 
                  )
 

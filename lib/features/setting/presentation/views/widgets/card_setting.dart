@@ -10,7 +10,7 @@ card_setting({required this.icon,required this.txt});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100.h,
+      height: 95.h,
       child: Column(
         children: [
           SizedBox(
@@ -24,7 +24,7 @@ card_setting({required this.icon,required this.txt});
               ),
               elevation: 0,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(7.0),
                 child: Row(
                   children: [
                     Icon(icon),
