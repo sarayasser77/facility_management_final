@@ -1,26 +1,22 @@
+import 'package:facility_management/features/home/views/FurnitureScreen.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utilies/assets.dart';
-import '../../services_home/presentation/views/widgets/list_item.dart';
+import '../../../services_home/presentation/views/widgets/list_item.dart';
 
 
 
-class HomeServiceList extends StatelessWidget {
-  HomeServiceList({Key? key,}) : super(key: key);
+
+class DiscoverScreenListview extends StatelessWidget {
+  DiscoverScreenListview({Key? key,}) : super(key: key);
 
   final services1 = [
-    "Pay a bill",
-    "Request service",
-    "Security",
-    "Rating",
-    "News",
+    "Furniture",
+    "Retail Services",
   ];
 
   final services2 = [
-    "Grocery shop ",
-    "Complain",
-    "ادارة الممتلكات" ,
-    "تصاريح",
-    "اجراءات"
+    "Banking and Insurance",
+    "Short Numbers",
   ];
   @override
   Widget build(BuildContext context) {
@@ -28,7 +24,7 @@ class HomeServiceList extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16.0,horizontal: 8),
       child: SizedBox(
         child: ListView.builder(
-            itemCount: 5,
+            itemCount: 2,
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) {
               return  Row(
@@ -36,9 +32,16 @@ class HomeServiceList extends StatelessWidget {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: HomeItem(num: 1.8,
-                        imagePath: AssetImage(AssetData.homeServices1[index]),
-                        text: services1[index],
+                      child: GestureDetector(
+                        onTap: (){
+
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> const FurnitureScreen()));
+
+                        },
+                        child: HomeItem(num: 1.8,
+                          imagePath: AssetImage(AssetData.discoverScreenListviewImages1[index]),
+                          text: services1[index],
+                        ),
                       ),
                     ),
                   ),
@@ -46,7 +49,7 @@ class HomeServiceList extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 14),
                       child: HomeItem(num: 1.8,
-                        imagePath: AssetImage(AssetData.homeServices2[index]),
+                        imagePath: AssetImage(AssetData.discoverScreenListviewImages2[index]),
                         text: services2[index],
                       ),
                     ),

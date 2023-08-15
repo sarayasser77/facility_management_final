@@ -12,7 +12,7 @@ class ServicesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBarForHomePage(text: 'Services', sizedBoxWidth: 180,),
-      body: HomeServiceList(),
+      body: HomeServiceList () ,
     );
   }
 }
