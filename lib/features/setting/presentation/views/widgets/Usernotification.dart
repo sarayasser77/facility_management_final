@@ -36,7 +36,7 @@ class EmptyNotificationListView extends StatelessWidget {
                 PageTransition(child: New_Gate(),
                     type: PageTransitionType.topToBottom,duration: Duration(seconds: 1))
 
-
+//
             );
 
           }, width: double.infinity,),
