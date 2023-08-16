@@ -13,17 +13,15 @@ class Grid_View_Categories extends StatelessWidget {
 return
     Padding(
         padding: const EdgeInsets.symmetric(vertical: 16.0,horizontal: 8),
-     child: FadeAnimation(4,child: Expanded(
-       child: GridView.builder(
+     child: FadeAnimation(4,child: GridView.builder(
     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
     crossAxisCount: 2,
-               ),
+             ),
     itemCount: 6,
     itemBuilder: (context , index)=>Padding(
     padding: const EdgeInsets.all(8.0),
     child: GridItemSetting(index: index,)
-    )),
-     ),)
+    )),)
     );
   }
 }

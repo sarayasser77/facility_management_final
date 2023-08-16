@@ -6,6 +6,7 @@ import '../../constants.dart';
 import '../../features/setting/presentation/animation/fadeanimation.dart';
 import '../../features/setting/presentation/views/widgets/griditem.dart';
 import '../../features/setting/presentation/views/widgets/gridviewcategories.dart';
+import '../../features/setting/presentation/views/widgets/HistoryRequestContainer.dart';
 import '../../features/setting/presentation/views/widgets/selectContainer.dart';
 
 class Custom_TabBar extends StatefulWidget {
@@ -25,13 +26,13 @@ class _Custom_TabBarState extends State<Custom_TabBar> {
     const Grid_View_Categories(),
     const Center(
         child: Text("You Dont't have invitations at that moment",)),
-    const Center(
-        child: Text("You Dont't have invitations at that moment",)),
+ListView.builder(
+    itemCount: 3,
+    itemBuilder: (context,insex){
+  return         History_Request_Container();
 
-    // Container(
-    //     height: 100,
-    //   color: Colors.red,
-    //     ),
+})
+
 
   ];
 
@@ -39,11 +40,10 @@ class _Custom_TabBarState extends State<Custom_TabBar> {
 
   @override
   Widget build(BuildContext context) {
-    return  ListView(
+    return  Column(
       children: [
         SizedBox(height: 10.h,),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
           color: LIGHT_GREY.withOpacity(.2),
           height: 50.h,
           child: ListView.builder(
@@ -65,23 +65,27 @@ class _Custom_TabBarState extends State<Custom_TabBar> {
                         borderRadius: BorderRadius.circular(7)
                     ),
 
-                    width: 110.w,
+                    width: 117.w,
                     height: 35.h,
                     child: Center(child: Text(items[index],style: TextStyle(color:current==index?Colors.white:Colors.black),),),
                   ),
                 );
               }),
         ),
-        const SizedBox(height: 10,),
-        const SelectContainer(),
-        SizedBox(
-          height: 540.h,
-        child: widgets[current]
+         SizedBox(height: 7.h,),
+       current==0? const SelectContainer():SizedBox(height: 20.h,),
+        SingleChildScrollView(
+          child: Container(
+            height: 470.h,
+          child: widgets[current],
+
+          ),
         )
 
       ],
     );
   }
 }
+
 
 
