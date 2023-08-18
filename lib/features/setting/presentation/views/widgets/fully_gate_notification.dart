@@ -24,30 +24,33 @@ final String details;
        body: Column(
          crossAxisAlignment: CrossAxisAlignment.start,
          children: [
-           SizedBox(height: 60.h,),
-           Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: LIGHT_GREY.withOpacity(.2),
-                borderRadius: BorderRadius.circular(10),
+           SizedBox(height: 50.h,),
+           Padding(
+             padding: const EdgeInsets.all(10.0),
+             child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: LIGHT_GREY.withOpacity(.2),
+                  borderRadius: BorderRadius.circular(10),
 
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ContainerRowNotif(name: name, date: date,widget: Text(date,style: TextStyle(color: LIGHT_GREY),),),
+                    ContainerRowNotif(name: service, date: date,widget: Icon(Icons.delete,color: Colors.red,),),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(details),
+                    ),
+
+                  ],
+                )
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ContainerRowNotif(name: name, date: date,widget: Text(date),),
-                  ContainerRowNotif(name: service, date: date,widget: Icon(Icons.delete,color: Colors.red,),),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text(details),
-                  ),
-
-                ],
-              )
-            ),
+           ),
            Spacer(),
            Padding(
-             padding: const EdgeInsets.only(bottom: 30,right: 20,left: 20),
+             padding: const EdgeInsets.only(bottom: 30,right: 10,left: 10),
              child: CustomButton(backgroundColor: kPrimaryColor, text: "Create New Gate notification",
                  func: (){
 Navigator.push(context, MaterialPageRoute(builder: (context)=>New_Gate()));
@@ -79,7 +82,7 @@ class ContainerRowNotif extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(name,style: TextStyle(fontSize: 20.sp),),
+          Text(name,style: TextStyle(fontSize: 18.sp),),
           widget,
         ],
       ),

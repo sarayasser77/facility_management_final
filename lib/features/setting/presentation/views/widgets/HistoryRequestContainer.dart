@@ -1,4 +1,5 @@
 import 'package:facility_management/core/utilies/styles.dart';
+import 'package:facility_management/features/setting/presentation/views/detailshistoryview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,7 +15,7 @@ class History_Request_Container extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(7.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         decoration: BoxDecoration(
             color: LIGHT_GREY.withOpacity(.2),
@@ -45,11 +46,12 @@ class History_Request_Container extends StatelessWidget {
                      ],
                    ),
                    Secondwidget:  CircleAvatar(
+
                      backgroundColor: kPrimaryColor,
-                     radius: 12.r,
-                     child: const Icon(
-                       Icons.arrow_forward_ios_outlined,color: Colors.white,size: 14,
-                     ),
+                     radius: 15.r,
+                     child: IconButton(onPressed: () {
+Navigator.push(context, MaterialPageRoute(builder: (context)=>History_Details()));
+                     }, icon: Icon(Icons.arrow_forward_ios_rounded,color: Colors.white,size: 18,),)
                    )
 
 

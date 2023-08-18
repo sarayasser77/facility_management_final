@@ -5,6 +5,7 @@ import 'package:facility_management/features/home/views/servicesScreen.dart';
 import 'package:facility_management/features/setting/presentation/views/setting_view.dart';
 import 'package:flutter/material.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class BottomNavBarForHome extends StatefulWidget {
@@ -37,7 +38,8 @@ class _BottomNavBarState extends State<BottomNavBarForHome> with TickerProviderS
         padding: const EdgeInsets.only(bottom: 10),
         child: DotNavigationBar(
 
-          boxShadow: [BoxShadow(color: Colors.grey.shade300,blurRadius: 3,blurStyle: BlurStyle.solid)],
+          boxShadow: [
+            BoxShadow(color: Colors.grey.shade300,blurRadius: 3,blurStyle: BlurStyle.solid)],
           currentIndex: currentIndex,
           onTap: (index){
             setState(() {
@@ -48,7 +50,7 @@ class _BottomNavBarState extends State<BottomNavBarForHome> with TickerProviderS
           // currentIndex: _SelectedTab.values.indexOf(_selectedTab),
           unselectedItemColor: Colors.grey[300],
           splashBorderRadius: 50,
-          borderRadius: 10,
+          borderRadius: 10.r,
 
           // onTap: _handleIndexChanged,
           dotIndicatorColor: kPrimaryColor,

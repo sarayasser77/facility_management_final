@@ -12,16 +12,16 @@ class SettingBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: [
          SizedBox(height: 20.h,),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Material(
             elevation: 1,
-            shadowColor: Colors.black,
+            shadowColor: Colors.grey.shade300,
             child: defaultText(
-              prefix: Icons.search_outlined,
+              prefixIcon: Icon(Icons.search_outlined),
                 type: TextInputType.text,
                 hint: "search for services,offer...",
                    borderWidth: .001

@@ -1,10 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../constants.dart';
-import '../../features/setting/presentation/animation/fadeanimation.dart';
-import '../../features/setting/presentation/views/widgets/griditem.dart';
 import '../../features/setting/presentation/views/widgets/gridviewcategories.dart';
 import '../../features/setting/presentation/views/widgets/HistoryRequestContainer.dart';
 import '../../features/setting/presentation/views/widgets/selectContainer.dart';
@@ -25,7 +22,7 @@ class _Custom_TabBarState extends State<Custom_TabBar> {
 
     const Grid_View_Categories(),
     const Center(
-        child: Text("You Dont't have invitations at that moment",)),
+        child: Text("You Don't have invitations at that moment",)),
 ListView.builder(
     itemCount: 3,
     itemBuilder: (context,insex){
@@ -59,15 +56,18 @@ ListView.builder(
 
                     });
                   },
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: current==index?kPrimaryColor:Colors.transparent,
-                        borderRadius: BorderRadius.circular(7)
-                    ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: current==index?kPrimaryColor:Colors.transparent,
+                          borderRadius: BorderRadius.circular(7)
+                      ),
 
-                    width: 117.w,
-                    height: 35.h,
-                    child: Center(child: Text(items[index],style: TextStyle(color:current==index?Colors.white:Colors.black),),),
+                      width: 98.w,
+                      height: 33.h,
+                      child: Center(child: Text(items[index],style: TextStyle(color:current==index?Colors.white:Colors.black),),),
+                    ),
                   ),
                 );
               }),
